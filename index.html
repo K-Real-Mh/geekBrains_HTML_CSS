@@ -33,12 +33,15 @@
                               fill="#E8E8E8"/>
                     </svg>
                 </button>
-                <label for="search-inp" class="visually-hidden"></label>
-                <input id="search-inp" type="text" class="header__input">
+                <label for="search-inp" class="visually-hidden">Поиск</label>
+                <input id="search-inp" type="text" class="header__input" placeholder="Поиск">
             </form>
             <div class="header__links">
                 <div class="burger-menu">
-                    <button class="burger-menu__btn" type="button"></button>
+                    <button class="burger-menu__btn" type="button">
+                        <span class="visually-hidden">Открыть меню</span>
+                        <span class="burger-menu__burger"></span>
+                    </button>
                     <nav class="burger-menu__nav">
                         <h2 class="burger-menu__title">menu</h2>
                         <button class="burger-menu__close">
@@ -134,9 +137,9 @@
         <section class="brand">
             <img class="brand__image" src="./img/man.jpg" alt="man" width="800" height="765">
             <div class="brand__wrapper">
-                <h1 class="brand__title brand__text">
+                <h1 class="brand__title">
                     <span class="brand__text brand__text--big">the brand</span>
-                    <span class="brand__text">of luxerious</span>
+                    <span class="brand__text">of luxerious </span>
                     <span class="brand__text brand__text--pink">fashion</span>
                 </h1>
             </div>
@@ -145,19 +148,19 @@
             <div class="stocks__container container">
                 <h2 class="visually-hidden">Stocks</h2>
                 <ul class="stocks__list">
-                    <li class="stocks__item"><a href="#" class="stocks__link">
+                    <li class="stocks__item stocks__item--women"><a href="#" class="stocks__link">
                         <p class="stocks__text">30% off</p>
                         <h3 class="stocks__item-title">for women</h3>
                     </a></li>
-                    <li class="stocks__item"><a href="#" class="stocks__link">
+                    <li class="stocks__item stocks__item--men"><a href="#" class="stocks__link">
                         <p class="stocks__text">hot deal</p>
                         <h3 class="stocks__item-title">for men</h3>
                     </a></li>
-                    <li class="stocks__item"><a href="#" class="stocks__link">
+                    <li class="stocks__item stocks__item--kids"><a href="#" class="stocks__link">
                         <p class="stocks__text">new arrivals</p>
                         <h3 class="stocks__item-title">for kids</h3>
                     </a></li>
-                    <li class="stocks__item"><a href="#" class="stocks__link">
+                    <li class="stocks__item stocks__item--accesories"><a href="#" class="stocks__link">
                         <p class="stocks__text">luxirous & trendy</p>
                         <h3 class="stocks__item-title">accesories</h3>
                     </a></li>
@@ -166,8 +169,10 @@
         </section>
         <section class="fetured-items">
             <div class="fetured-items__container container">
-                <h2 class="fetured-items__title">Fetured Items</h2>
-                <p class="fetured-items__sub-title">Shop for items based on what we featured in this week</p>
+                <div class="fetured-items__header">
+                    <h2 class="fetured-items__title">Fetured Items</h2>
+                    <p class="fetured-items__sub-title">Shop for items based on what we featured in this week</p>
+                </div>
                 <ul class="fetured-items__list">
                     <li class="fetured-items__item">
                         <article class="product">

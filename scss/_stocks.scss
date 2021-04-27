@@ -1,0 +1,55 @@
+.stocks {
+  padding: 64px 0;
+
+  &__container {
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 260px 180px;
+    gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--women {
+      background: url("../img/stocks-women.jpg") 0 0/ 100% no-repeat;
+    }
+
+    &--men {
+      background: url("../img/stocks-men.jpg") 0 0/ 100% no-repeat;
+    }
+
+    &--kids {
+      background: url("../img/stocks-kids.jpg") 0 0/ 100% no-repeat;
+    }
+
+    &--accesories {
+      background: url("../img/stocks-accesories.jpg") 0 0/ 100% no-repeat;
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+  }
+
+  &__item-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: $pink;
+  }
+}
+
