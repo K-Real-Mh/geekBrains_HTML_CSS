@@ -18,6 +18,7 @@ $mainBlack: #222222;
 $gray: #9F9F9F;
 $gray2: #F8F8F8;
 $gray3: #5D5D5D;
+$gray4: #e1e1e1;
 $lightGray: #E8E8E8;
 $pink: #F16D7F;
 $pink2: #F26376;
@@ -86,3 +87,7 @@ body {
 @import "stocks";
 @import "fetured-items";
 @import "product";
+@import "advantages";
+@import "subscribe";
+@import "comment";
+@import "footer";
