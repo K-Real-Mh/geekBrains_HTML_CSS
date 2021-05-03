@@ -3,15 +3,13 @@
   min-height: 75px;
   display: flex;
   align-items: center;
+  position: relative;
   &__container {
     width: 100%;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: end;
     gap: 40px;
-  }
-
-  &__logo {
   }
 
   &__search {
@@ -21,11 +19,14 @@
 
   &__btn {
     background: transparent;
+    @include svg-hover-pink
   }
 
   &__input {
     transition: $transition;
     transform: scaleX(0);
+    margin-left: 10px;
+    padding: 0 10px;
     &--active {
       transform: scaleX(1);
     }
@@ -39,6 +40,7 @@
   }
 
   &__link {
+    @include svg-hover-pink
   }
 
   &__link--cart {

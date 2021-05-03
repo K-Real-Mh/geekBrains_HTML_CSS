@@ -1,6 +1,7 @@
 .subscribe {
-  background: url("../img/subscribe-bckg.jpg")0 0/cover no-repeat;
+  background: url("../img/subscribe-bckg.jpg") 0 0/cover no-repeat;
   position: relative;
+
   &:after {
     content: '';
     position: absolute;
@@ -8,7 +9,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background:  rgba(244, 244, 244, 0.7);
+    background: rgba(244, 244, 244, 0.7);
   }
 
   &__container {
@@ -60,7 +61,8 @@
     background: $gray4;
     padding-left: 22px;
   }
-  &__input, &__input::placeholder  {
+
+  &__input, &__input::placeholder {
     font-size: 14px;
     line-height: 1.2em;
     color: $gray;
@@ -76,6 +78,8 @@
     color: #ffffff;
     border-bottom-right-radius: 100px;
     border-top-right-radius: 100px;
+    transition: $transition;
+    @include hover-pink-btn;
   }
 }
 

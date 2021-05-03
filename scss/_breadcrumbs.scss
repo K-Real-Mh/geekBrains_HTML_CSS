@@ -1,0 +1,20 @@
+.breadcrumbs {
+  background: $lightPink2;
+  min-height: 148px;
+  display: flex;
+  align-items: center;
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 1.2em;
+    color: $pink;
+  }
+
+}

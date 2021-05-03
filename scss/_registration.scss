@@ -1,0 +1,141 @@
+.registration {
+  padding: 64px 0 96px 0;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 128px;
+  }
+
+  &__form {
+    display: grid;
+    gap: 40px;
+  }
+
+  &__form-wrapper {
+    display: grid;
+    gap: 32px;
+  }
+
+
+  &__legend {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.2em;
+    color: $mainBlack;
+  }
+
+  &__inp-wrapper {
+    margin-top: 20px;
+    display: grid;
+    gap: 15px;
+  }
+
+  &__inp, &__inp::placeholder {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1.2em;
+  }
+
+  &__inp {
+    border: 1px solid #A4A4A4;
+    min-height: 45px;
+    padding: 0 17px;
+    transition: $transition;
+
+    &:focus {
+      border-color: $pink;
+    }
+  }
+
+  &__checkboxes {
+    display: inline-grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: start;
+  }
+
+  &__checkbox-text {
+    display: inline-grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    align-items: center;
+
+    &:before {
+      content: '';
+      border: 1px solid #A4A4A4;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: #ffffff;
+      transition: $transition;
+    }
+
+    span {
+      font-weight: 300;
+      font-size: 11px;
+      line-height: 1.2em;
+    }
+  }
+
+  &__checkbox {
+    input {
+      display: none;
+
+      &:checked + .registration__checkbox-text:before {
+        border-color: $pink;
+        background: $pink;
+      }
+    }
+  }
+
+  &__subtext {
+    color: #b1b1b1;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1.2em;
+  }
+
+  &__btn {
+    padding: 0 29px;
+    width: fit-content;
+    font-size: 14px;
+    line-height: 1.2em;
+  }
+
+  &__btn-wrapper {
+    display: inline-grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__description {
+    display: grid;
+    align-content: start;
+    gap: 22px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.2em;
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: grid;
+    gap: 16px;
+    padding-left: 20px;
+
+    li {
+      padding-left: 23px;
+
+      &::marker {
+        content: url("../img/marker.svg");
+      }
+    }
+  }
+}
+
