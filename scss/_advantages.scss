@@ -1,0 +1,35 @@
+.advantages {
+  background: $mainBlack;
+  padding: 104px 0;
+
+  &__container {
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(auto, 360px));
+    gap: 30px;
+  }
+
+  &__item {
+    text-align: center;
+    color: $gray2;
+    svg {
+      margin: 0 auto;
+      min-height: 40px;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 1.2em;
+    margin-top: 1em;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2em;
+    margin-top: 1.4em;
+  }
+}

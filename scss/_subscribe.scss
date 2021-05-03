@@ -1,0 +1,82 @@
+.subscribe {
+  background: url("../img/subscribe-bckg.jpg")0 0/cover no-repeat;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:  rgba(244, 244, 244, 0.7);
+  }
+
+  &__container {
+    z-index: 1;
+    position: relative;
+  }
+
+  &__wrapper {
+    min-height: 448px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: start;
+  }
+
+  &__form-wrapper {
+    width: 100%;
+    color: $mainBlack;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    margin: 0 auto;
+    max-width: 356px;
+    min-height: 49px;
+    display: flex;
+  }
+
+  &__input {
+    width: 100%;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+    background: $gray4;
+    padding-left: 22px;
+  }
+  &__input, &__input::placeholder  {
+    font-size: 14px;
+    line-height: 1.2em;
+    color: $gray;
+  }
+
+  &__btn {
+    background: $pink;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #ffffff;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+  }
+}
+
+

@@ -1,0 +1,36 @@
+.footer {
+  background: $mainBlack;
+
+  &__container {
+    min-height: 79px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__copyright {
+    font-size: 16px;
+    color: $gray2;
+    line-height: 1.2em;
+  }
+
+  &__socials {
+    display: inline-grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 7.3px;
+  }
+
+  &__social {
+
+  }
+
+  &__link {
+    background: #ffffff;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
