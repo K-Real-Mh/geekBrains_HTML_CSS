@@ -1,0 +1,48 @@
+@mixin hover-opacity {
+  &:hover, &:active, &:focus-visible {
+    opacity: 0.5;
+  }
+}
+
+@mixin hover-pink {
+  &:hover, &:active, &:focus-visible {
+    color: $pink;
+  }
+}
+
+@mixin hover-white {
+  &:hover, &:active, &:focus-visible {
+    color: #FFFFFF;
+  }
+}
+
+
+@mixin hover-pink-btn {
+  &:hover, &:active, &:focus-visible {
+    background: $pinkBtn;
+  }
+}
+
+@mixin svg-hover-pink {
+  svg {
+    path {
+      transition: $transition;
+    }
+  }
+
+  &:hover, &:active, &:focus-visible {
+    svg {
+      path {
+        fill: $pink;
+      }
+    }
+  }
+}
+
+@mixin hover-rotate {
+  &:hover, &:active, &:focus-visible {
+    transform: rotate(180deg);
+  }
+}
+
+

@@ -1,3 +1,6 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins";
+//</МИКСИНЫ>===============================================================================================
 
 //<Подключаем шрифты>=======================================================================================
 @import "_fonts";
@@ -19,11 +22,15 @@ $gray: #9F9F9F;
 $gray2: #F8F8F8;
 $gray3: #5D5D5D;
 $gray4: #e1e1e1;
+$gray5: #b1b1b1;
+$gray6: #6f6e6e;
 $lightGray: #E8E8E8;
 $pink: #F16D7F;
 $pink2: #F26376;
 $pink3: #FF6A6A;
+$pinkBtn: #E05C6E;
 $lightPink: #F1E4E6;
+$lightPink2: #F8F3F4;
 $transition: all .3s ease 0s;
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
@@ -48,6 +55,31 @@ body {
   overflow: hidden;
   border: 0;
   clip: rect(0 0 0 0);
+}
+
+.button {
+  background: $pink;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: $transition;
+  @include hover-pink-btn;
+}
+
+input{
+  &::placeholder {
+    text-indent: 0;
+    transition: text-indent 0.3s ease;
+  }
+
+  &:focus {
+    &::placeholder {
+      text-indent: 500px;
+    }
+  }
 }
 //</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 
@@ -91,3 +123,5 @@ body {
 @import "subscribe";
 @import "comment";
 @import "footer";
+@import "breadcrumbs";
+@import "registration";

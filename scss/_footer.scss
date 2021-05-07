@@ -21,10 +21,6 @@
     gap: 7.3px;
   }
 
-  &__social {
-
-  }
-
   &__link {
     background: #ffffff;
     width: 32px;
@@ -32,5 +28,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: $transition;
+    @include hover-pink-btn;
   }
 }
