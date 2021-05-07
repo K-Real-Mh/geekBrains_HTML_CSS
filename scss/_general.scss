@@ -1,0 +1,68 @@
+body {
+  color: #000;
+  font-size: 14px;
+  line-height: 1.2em;
+  background-color: #ffffff;
+  font-family: $fontFamily;
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.button {
+  background: $pink;
+  min-height: 50px;
+  @include flex-center;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: $transition;
+  @include hover-pink-btn;
+}
+
+input{
+  &::placeholder {
+    text-indent: 0;
+    transition: text-indent 0.3s ease;
+  }
+
+  &:focus {
+    &::placeholder {
+      text-indent: 500px;
+    }
+  }
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
+  @media (max-width: $md1+px) {
+    max-width: none;
+    padding: 0 16px;
+  }
+  @media (max-width: $md2+px) {
+    padding: 0 8px;
+  }
+}
+
+.page {
+  flex: 1 1 auto;
+}

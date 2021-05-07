@@ -1,3 +1,9 @@
+@mixin focus-border {
+  &:focus {
+    border-color: $pink;
+  }
+}
+
 @mixin hover-opacity {
   &:hover, &:active, &:focus-visible {
     opacity: 0.5;
@@ -43,6 +49,24 @@
   &:hover, &:active, &:focus-visible {
     transform: rotate(180deg);
   }
+}
+
+@mixin flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin inline-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
