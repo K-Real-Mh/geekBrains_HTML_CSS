@@ -37,9 +37,7 @@
     line-height: 1.2em;
     color: $pink2;
     border: 1px solid $pink3;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    @include inline-flex-center;
     justify-self: center;
     padding: 0.9em 2.4em;
     transition: $transition;

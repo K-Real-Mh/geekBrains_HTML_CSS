@@ -53,9 +53,7 @@
       height: 19px;
       border-radius: 50%;
       background: $pink;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+      @include inline-flex-center;
       font-size: 12px;
       color: #ffffff;
     }

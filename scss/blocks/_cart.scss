@@ -1,0 +1,121 @@
+.cart {
+  padding: 96px 0 128px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    gap: 128px;
+  }
+
+  &__products {
+    margin: 0 0 72px 0;
+    display: grid;
+    gap: 40px;
+    align-content: start;
+  }
+
+  &__products-btns {
+    @include flex-between-center;
+  }
+
+  &__btn {
+    width: fit-content;
+    color: #000000;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    background: transparent;
+    min-height: 50px;
+    padding: 0 40px;
+    border: 1px solid $gray7;
+    @include flex-center;
+    transition: $transition;
+    @include hover-pink-btn;
+    @include hover-white;
+
+    &--min {
+      color: $gray7;
+      font-size: 11px;
+      min-height: 35px;
+      padding: 0 14px;
+    }
+  }
+
+  &__ordering {
+    display: grid;
+    align-content: start;
+    gap: 57.5px;
+  }
+
+  &__shipping-form {
+    display: grid;
+    align-content: start;
+    gap: 20px;
+  }
+
+  &__text-title {
+    color: $mainBlack;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+  }
+
+  &__input, &__input::placeholder {
+    font-weight: 300;
+    font-size: 13px;
+    color: $gray5;
+  }
+
+  &__input {
+    color: $mainBlack;
+    min-height: 44px;
+    border: 1px solid $gray7;
+    width: 100%;
+    padding: 0 0 0 17px;
+    @include focus-border;
+  }
+
+  &__finally {
+    background: #F5F3F3;
+    padding: 42px;
+  }
+
+  &__price-wrapper {
+    padding: 0 0 20px;
+    margin-bottom: 17px;
+    border-bottom: 1px solid #E2E2E2;
+    display: grid;
+    gap: 12px;
+    align-content: start;
+  }
+
+  &__price {
+    font-size: 11px;
+    line-height: 1.2em;
+    display: inline-grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: end;
+    gap: 2.2em;
+    text-transform: uppercase;
+    margin-right: -3px;
+
+    &--grand {
+      margin-right: 0;
+      font-weight: 300;
+      font-size: 16px;
+      span {
+        &:last-child {
+          font-weight: 700;
+          color: $pink;
+        }
+      }
+    }
+  }
+
+  &__final-button {
+    width: 100%;
+  }
+}

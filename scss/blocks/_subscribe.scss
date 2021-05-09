@@ -71,9 +71,7 @@
   &__btn {
     background: $pink;
     min-width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     font-size: 14px;
     color: #ffffff;
     border-bottom-right-radius: 100px;

@@ -9,9 +9,7 @@
   }
 
   &__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     &--women {
       background: url("../img/stocks-women.jpg") 0 0/ 100% no-repeat;
     }
