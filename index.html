@@ -137,7 +137,10 @@
     </header>
     <main class="page">
         <section class="brand">
-            <img class="brand__image" src="./img/man.jpg" alt="man" width="800" height="765">
+            <img class="brand__image"
+                 srcset="./img/man-385w.jpg 385w, ./img/man.jpg 800w"
+                 sizes="(max-width: 1152px) 385px, 800px"
+                 src="./img/man.jpg" alt="man">
             <div class="brand__wrapper">
                 <h1 class="brand__title">
                     <span class="brand__text brand__text--big">the brand</span>

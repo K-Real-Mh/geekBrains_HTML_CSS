@@ -5,11 +5,16 @@
   align-items: center;
   position: relative;
   &__container {
-    width: 100%;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: end;
     gap: 40px;
+    @include tablet {
+      padding: 0 32px;
+    }
+    @include mobile {
+      padding: 0 16px;
+    }
   }
 
   &__search {
@@ -19,7 +24,7 @@
 
   &__btn {
     background: transparent;
-    @include svg-hover-pink
+    @include svg-hover-pink;
   }
 
   &__input {
@@ -27,6 +32,9 @@
     transform: scaleX(0);
     margin-left: 10px;
     padding: 0 10px;
+    @include mobile {
+      max-width: 145px;
+    }
     &--active {
       transform: scaleX(1);
     }
@@ -40,7 +48,10 @@
   }
 
   &__link {
-    @include svg-hover-pink
+    @include svg-hover-pink;
+    @include mobile {
+      display: none;
+    }
   }
 
   &__link--cart {

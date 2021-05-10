@@ -5,6 +5,12 @@
 
   }
 
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
   &__wrapper {
     background: $gray2;
     padding: 25px 16.5px 20px;

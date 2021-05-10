@@ -148,7 +148,11 @@
         <div class="cart__products-wrapper">
           <div class="cart__products">
             <article class="cart-product">
-              <img src="img/cart-product-1.jpg" alt="MANGO  PEOPLE  T-SHIRT" width="262" height="306">
+              <img srcset="./img/cart-product-1-188w.jpg 144w,
+                             ./img/cart-product-1.jpg 262w"
+                      sizes="(max-width: 767px) 144px,
+                             262px"
+                      src="img/cart-product-1.jpg" alt="MANGO  PEOPLE  T-SHIRT" >
               <div class="cart-product__wrapper">
                 <div class="cart-product__header">
                   <h3 class="cart-product__title">MANGO  PEOPLE  T-SHIRT</h3>
@@ -168,7 +172,11 @@
               </div>
             </article>
             <article class="cart-product">
-              <img src="img/cart-product-2.jpg" alt="MANGO  PEOPLE  T-SHIRT" width="262" height="306">
+              <img srcset="./img/cart-product-2-188w.jpg 144w,
+                             ./img/cart-product-2.jpg 262w"
+                   sizes="(max-width: 767px) 144px,
+                             262px"
+                   src="img/cart-product-2.jpg" alt="MANGO  PEOPLE  T-SHIRT" >
               <div class="cart-product__wrapper">
                 <div class="cart-product__header">
                   <h3 class="cart-product__title">MANGO  PEOPLE  T-SHIRT</h3>
@@ -189,8 +197,8 @@
             </article>
           </div>
           <div class="cart__products-btns">
-            <button class="cart__btn" type="button">CLEAR SHOPPING CART</button>
-            <a href="#" class="cart__btn">CONTINUE SHOPPING</a>
+            <button class="cart__btn" type="button">Clear shopping cart</button>
+            <a href="#" class="cart__btn">Continue shopping</a>
           </div>
         </div>
         <div class="cart__ordering">
@@ -208,7 +216,7 @@
               <span class="visually-hidden">Postcode / Zip</span>
               <input type="text" class="cart__input" placeholder="Postcode / Zip">
             </label>
-            <button class="cart__btn cart__btn--min">GET A QUOTE</button>
+            <button class="cart__btn cart__btn--min">Get a quote</button>
           </form>
           <div class="cart__finally">
             <div class="cart__price-wrapper">

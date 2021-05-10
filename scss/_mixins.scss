@@ -69,4 +69,15 @@
   align-items: center;
 }
 
+@mixin tablet {
+  @media (max-width: $md1+px){
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $md2+px) {
+    @content;
+  }
+}
 
