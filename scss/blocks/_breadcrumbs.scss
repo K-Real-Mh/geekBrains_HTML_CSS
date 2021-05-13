@@ -19,4 +19,24 @@
 
   }
 
+  &__list {
+    display: flex;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    color: #636363;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2em;
+    margin-right: 5px;
+    transition: $transition;
+    @include hover-pink;
+    &--active {
+      font-weight: 700;
+      color: $pink;
+      margin-right: 0;
+    }
+  }
+
 }
