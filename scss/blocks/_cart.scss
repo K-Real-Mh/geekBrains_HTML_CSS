@@ -1,10 +1,23 @@
 .cart {
   padding: 96px 0 128px;
+  @include tablet {
+    padding: 59px 0 128px;
+  }
+  @include mobile {
+    padding: 40px 0 96px;
+  }
 
   &__container {
     display: grid;
     grid-template-columns: 8fr 4fr;
     gap: 128px;
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: 65px;
+    }
+    @include mobile {
+      gap: 48px;
+    }
   }
 
   &__products {
@@ -12,10 +25,27 @@
     display: grid;
     gap: 40px;
     align-content: start;
+    @include tablet {
+      margin: 0 0 62px 0;
+    }
+    @include mobile {
+      margin: 0 0 30px;
+      gap: 32px;
+    }
   }
 
   &__products-btns {
     @include flex-between-center;
+    @include tablet {
+      display: grid;
+      grid-auto-flow: column;
+      gap: 50px;
+      justify-content: center;
+    }
+    @include mobile {
+      gap: 9px;
+      justify-content: unset;
+    }
   }
 
   &__btn {
@@ -33,12 +63,24 @@
     transition: $transition;
     @include hover-pink-btn;
     @include hover-white;
+    @include mobile {
+      text-transform: unset;
+      width: 100%;
+      min-height: 33px;
+      text-align: center;
+      padding: 0;
+      font-size: 12px;
+    }
 
     &--min {
       color: $gray7;
       font-size: 11px;
       min-height: 35px;
       padding: 0 14px;
+      @include mobile {
+        padding: 0 20px;
+        width: fit-content;
+      }
     }
   }
 
@@ -46,6 +88,15 @@
     display: grid;
     align-content: start;
     gap: 57.5px;
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
   }
 
   &__shipping-form {
@@ -80,6 +131,13 @@
   &__finally {
     background: #F5F3F3;
     padding: 42px;
+    @include tablet {
+      margin-top: 38px;
+    }
+    @include mobile {
+      margin-top: 0;
+      padding: 39px 42px 42px;
+    }
   }
 
   &__price-wrapper {
@@ -106,6 +164,7 @@
       margin-right: 0;
       font-weight: 300;
       font-size: 16px;
+
       span {
         &:last-child {
           font-weight: 700;
@@ -117,5 +176,8 @@
 
   &__final-button {
     width: 100%;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.2em;
   }
 }

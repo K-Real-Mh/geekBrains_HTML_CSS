@@ -3,13 +3,26 @@
 
   &__container {
     min-height: 79px;
-   @include flex-between-center;
+    @include flex-between-center;
+    @include tablet {
+      padding: 0 32px;
+    }
+    @include mobile {
+      padding: 0 16px 9px;
+      min-height: unset;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   &__copyright {
     font-size: 16px;
     color: $gray2;
     line-height: 1.2em;
+    @include mobile {
+      order: 2;
+
+    }
   }
 
   &__socials {
@@ -17,6 +30,9 @@
     grid-auto-flow: column;
     align-items: center;
     gap: 7.3px;
+    @include mobile {
+      padding: 40px 0;
+    }
   }
 
   &__link {

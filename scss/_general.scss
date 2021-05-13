@@ -52,13 +52,13 @@ input{
 }
 
 .container {
-  max-width: $maxWidthContainer + px;
+  width: $maxWidthContainer / $maxWidth * 100%;
   margin: 0 auto;
-  @media (max-width: $md1+px) {
-    max-width: none;
+  @include tablet {
+    width: 100%;
     padding: 0 16px;
   }
-  @media (max-width: $md2+px) {
+  @include mobile {
     padding: 0 8px;
   }
 }

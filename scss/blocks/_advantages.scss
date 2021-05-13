@@ -1,11 +1,20 @@
 .advantages {
   background: $mainBlack;
   padding: 104px 0;
+  @include tablet {
+    padding: 48px 0 64px;
+  }
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(auto, 360px));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    @include tablet {
+      justify-content: center;
+      grid-template-columns: 360px;
+      gap: 49px;
+
+    }
   }
 
   &__item {

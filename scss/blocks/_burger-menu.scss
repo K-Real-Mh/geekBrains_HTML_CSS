@@ -69,9 +69,13 @@
     transition: $transition;
     font-size: 14px;
     line-height: 1.2em;
+    @include tablet {
+      overflow-y: scroll;
+    }
   }
 
   &__nav-wrapper {
+    z-index: 1;
     position: absolute;
     top: 100%;
     left: 0;
