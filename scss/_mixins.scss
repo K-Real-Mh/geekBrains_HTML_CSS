@@ -45,6 +45,22 @@
   }
 }
 
+@mixin svg-hover-white {
+  svg {
+    path {
+      transition: $transition;
+    }
+  }
+
+  &:hover, &:active, &:focus-visible {
+    svg {
+      path {
+        fill: #ffffff;
+      }
+    }
+  }
+}
+
 @mixin hover-rotate {
   &:hover, &:active, &:focus-visible {
     transform: rotate(180deg);
@@ -67,6 +83,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin inline-grid-column {
+  display: inline-grid;
+  align-items: center;
+  grid-auto-flow: column;
 }
 
 @mixin tablet {
