@@ -8,6 +8,7 @@
     @include flex-between-center;
     @include mobile {
       justify-content: center;
+      flex-direction: column;
     }
   }
 
@@ -16,7 +17,29 @@
     font-size: 24px;
     line-height: 1.2em;
     color: $pink;
+    @include mobile {
+      margin-bottom: 32px;
+    }
+  }
 
+  &__list {
+    display: flex;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    color: #636363;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2em;
+    margin-right: 5px;
+    transition: $transition;
+    @include hover-pink;
+    &--active {
+      font-weight: 700;
+      color: $pink;
+      margin-right: 0;
+    }
   }
 
 }
