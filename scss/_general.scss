@@ -67,6 +67,12 @@ input{
   flex: 1 1 auto;
 }
 
+.checkbox {
+
+  &__checkbox-text {
+  }
+}
+
 
 .swiper-container {
   overflow: hidden;
