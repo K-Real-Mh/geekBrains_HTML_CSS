@@ -13,6 +13,9 @@
 @mixin hover-pink {
   &:hover, &:active, &:focus-visible {
     color: $pink;
+    svg {
+      fill: $pink;
+    }
   }
 }
 

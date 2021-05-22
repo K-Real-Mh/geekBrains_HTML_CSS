@@ -1,14 +1,33 @@
 .pagenavigation {
+  background: #FFFFFF;
+  border: 1px solid #EBEBEB;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 15px 16px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
 
-  &__prev {
+  &__arrow {
+    display: flex;
+    transition: $transition;
+    @include svg-hover-pink;
   }
 
   &__main {
+    padding: 0 17px;
   }
 
   &__page {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.2em;
+    color: $gray7;
+    transition: $transition;
+    @include hover-pink;
+    &:not(:nth-last-child(-n+3)) {
+      margin-right: 20px;
+    }
   }
 
-  &__next {
-  }
 }
