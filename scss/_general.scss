@@ -67,6 +67,41 @@ input{
   flex: 1 1 auto;
 }
 
+.checkbox {
+  cursor: pointer;
+
+  input {
+    display: none;
+    &:checked + .checkbox__checkbox-text:before {
+      border-color: $pink;
+      background: $pink;
+    }
+  }
+
+  &__checkbox-text {
+    display: inline-grid;
+    grid-auto-flow: column;
+    gap: 9px;
+    align-items: center;
+
+    &:before {
+      content: '';
+      border: 1px solid #EBEBEB;
+      width: 12px;
+      height: 12px;
+      background: #ffffff;
+      transition: $transition;
+    }
+
+    span {
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 1.2em;
+      color: #6F6E6E;
+    }
+  }
+}
+
 
 .swiper-container {
   overflow: hidden;

@@ -1,0 +1,40 @@
+.catalog {
+  padding-bottom: 96px;
+  @include tablet {
+    padding-bottom: 63px;
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 30px;
+    padding: 38px 0 50px;
+    @include tablet {
+      display: flex;
+      gap: 0;
+      justify-content: space-between;
+      padding: 11px 0 27px;
+    }
+    @include mobile {
+      padding: 11px 0 19px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 0 48.5px;
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      padding: 0 0 40px;
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+}
+

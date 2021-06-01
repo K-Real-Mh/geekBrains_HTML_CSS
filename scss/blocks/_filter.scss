@@ -1,0 +1,121 @@
+.filter {
+  background: #FFFFFF;
+  position: relative;
+  &__header {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2em;
+    text-align: start;
+    position: relative;
+    padding: 13px 16px 16px;
+    z-index: 2;
+    background: inherit;
+    text-transform: uppercase;
+    transition: $transition;
+    @include hover-pink;
+    svg {
+      transition: $transition;
+      margin-left: 11px;
+      @include mobile {
+        margin: 0;
+        width: 37.5px;
+        height: 25px;
+      }
+    }
+    span {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__main {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background: inherit;
+    z-index: 1;
+    padding: 16px;
+    transition: opacity .3s ease 0s;
+    opacity: 0;
+    visibility: hidden;
+    @include mobile {
+      width: 100vw;
+      left: -8px;
+    }
+  }
+
+  &__block {
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__title-block {
+    width: 100%;
+    text-align: start;
+    background: transparent;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1.2em;
+    color: $gray6;
+    transition: $transition;
+    padding: 11px 16px;
+    border-bottom: 1px solid #EBEBEB;
+    position: relative;
+    @include hover-pink;
+
+    &--active {
+      color: $pink;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: calc(100% + 1px);
+      width: 5px;
+      background: #EF5B70;
+    }
+  }
+
+  &__list {
+    padding: 25px 16px 6px;
+    display: none;
+  }
+
+  &__item {
+    font-size: 14px;
+    line-height: 1.2em;
+
+    button {
+      transition: $transition;
+      @include hover-pink;
+      background: transparent;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 11px;
+    }
+  }
+
+  &--active {
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+    .filter__header {
+      color: $pink;
+      width: 100%;
+      svg {
+        fill: $pink;
+      }
+    }
+
+    .filter__main {
+      box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

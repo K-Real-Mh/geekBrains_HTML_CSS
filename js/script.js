@@ -35,21 +35,78 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.remove('lock');
         }
     })
+
+//    Фильтр
+    const filter = document.querySelector('.filter');
+    if (filter) {
+        const filterBtn = filter.querySelector('.filter__header');
+        const filterBlockTitles = filter.querySelectorAll('.filter__title-block');
+
+        filterBtn.addEventListener('click', () => {
+            filter.classList.toggle('filter--active');
+        });
+
+        filterBlockTitles.forEach(t => {
+
+            t.addEventListener('click', () => {
+                if (!t.classList.contains('filter__title-block--active')) {
+                    filterBlockTitles.forEach(title => {
+                        if (title != t) {
+                            title.classList.remove('filter__title-block--active');
+                            _slideUp(title.nextElementSibling);
+                        }
+                    })
+
+                    t.classList.add('filter__title-block--active');
+                    _slideDown(t.nextElementSibling);
+                } else {
+                    t.classList.remove('filter__title-block--active');
+                    _slideUp(t.nextElementSibling);
+                }
+            })
+        })
+
+        document.addEventListener('click', (e) => {
+            if (e.target.contains(filter)) {
+                filter.classList.remove('filter--active');
+            }
+        });
+
+    }
+
+//    Фильтры
+    const filtersWrapper = document.querySelector('.filters');
+    if (filtersWrapper) {
+        const filters = filtersWrapper.querySelectorAll('.filters__filter');
+
+        filters.forEach(filter => {
+            const btn = filter.querySelector('.filters__header');
+
+            btn.addEventListener('click', () => {
+                btn.nextElementSibling.classList.toggle('filters__list--active');
+            })
+        })
+    }
 })
 
-const swiper = new Swiper('.swiper-container', {
-    loop: true,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-});
+let swiperContainer = document.querySelector('.swiper-container');
+
+if (swiperContainer) {
+    const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+}
 
 //Select
 let selects = document.getElementsByTagName('select');
 if (selects.length > 0) {
     selects_init();
 }
+
 function selects_init() {
     for (let index = 0; index < selects.length; index++) {
         const select = selects[index];
@@ -65,6 +122,7 @@ function selects_init() {
         }
     });
 }
+
 function selects_close(e) {
     const selects = document.querySelectorAll('.select');
     if (!e.target.closest('.select') && !e.target.classList.contains('_option')) {
@@ -76,6 +134,7 @@ function selects_close(e) {
         }
     }
 }
+
 function select_init(select) {
     const select_parent = select.parentElement;
     const select_modifikator = select.getAttribute('class');
@@ -89,6 +148,7 @@ function select_init(select) {
     new_select.appendChild(select);
     select_item(select);
 }
+
 function select_item(select) {
     const select_parent = select.parentElement;
     const select_items = select_parent.querySelector('.select__item');
@@ -116,6 +176,7 @@ function select_item(select) {
 
     select_actions(select, select_parent);
 }
+
 function select_actions(original, select) {
     const select_item = select.querySelector('.select__item');
     const selectTitle = select.querySelector('.select__title');
@@ -143,6 +204,7 @@ function select_actions(original, select) {
         }
         select.querySelector('.select__value').innerHTML = '<span>' + selectedOptionsText + '</span>';
     }
+
     function selectItemActions(type) {
         if (!type) {
             let selects = document.querySelectorAll('.select');
@@ -158,6 +220,7 @@ function select_actions(original, select) {
             select.classList.toggle('_active');
         }
     }
+
     for (let index = 0; index < select_options.length; index++) {
         const select_option = select_options[index];
         const select_option_value = select_option.getAttribute('data-value');
@@ -196,6 +259,7 @@ function select_actions(original, select) {
         });
     }
 }
+
 function select_get_options(select_options) {
     if (select_options) {
         let select_options_content = '';
@@ -210,6 +274,7 @@ function select_get_options(select_options) {
         return select_options_content;
     }
 }
+
 function select_search(e) {
     let select_block = e.target.closest('.select ').querySelector('.select__options');
     let select_options = e.target.closest('.select ').querySelectorAll('.select__option');
@@ -225,6 +290,7 @@ function select_search(e) {
         }
     }
 }
+
 function selects_update_all() {
     let selects = document.querySelectorAll('select');
     if (selects) {
@@ -234,6 +300,7 @@ function selects_update_all() {
         }
     }
 }
+
 //SlideToggle
 let _slideUp = (target, duration = 500) => {
     target.style.transitionProperty = 'height, margin, padding';
